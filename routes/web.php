@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Saved;
 use App\Http\Controllers\Search;
 use App\Http\Controllers\Upload;
 use Illuminate\Support\Facades\Route;
@@ -35,9 +36,9 @@ Route::get('/create', [Upload::class, 'view'])
     ->middleware('auth')
     ->name('create');
 
-Route::get('/saved', function () {
-    return view('saved');
-})->middleware(['auth'])->name('saved');
+Route::get('/saved', [Saved::class, 'view'])
+    ->middleware('auth')
+    ->name('saved');
 
 Route::post('/create/save', [Upload::class, 'SaveIt'])
     ->middleware('auth')
