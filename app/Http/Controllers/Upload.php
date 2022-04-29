@@ -8,6 +8,6 @@ class Upload extends Controller
 {
     public function view()
     {
-
+        return view('create');
     }
 }
