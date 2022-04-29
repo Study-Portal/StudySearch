@@ -21,7 +21,9 @@ class Search extends Controller
     {
         $data = Post::search($request->input('search'));
 
-        $data->where('subject_id', $request->input('subject'));
+        $data
+            ->where('subject_id', $request->input('subject'))
+            ->where('private', 0);
 
         return view('results', [
             'results' => $data->get(),
