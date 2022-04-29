@@ -56,6 +56,9 @@
                             @endforeach
 
                         </ul>
+
+                        {{$results->links()}}
+
                     </div>
 
                 </div>

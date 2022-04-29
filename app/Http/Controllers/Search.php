@@ -26,7 +26,7 @@ class Search extends Controller
             ->where('private', 0);
 
         return view('results', [
-            'results' => $data->get(),
+            'results' => $data->paginate(10),
         ]);
     }
 }
