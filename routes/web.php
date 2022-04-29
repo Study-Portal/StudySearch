@@ -26,6 +26,10 @@ Route::get('/search', [Search::class, 'view'])
     ->middleware('auth')
     ->name('search');
 
+Route::get('/results', [Search::class, 'doSearch'])
+    ->middleware('auth')
+    ->name('results');
+
 Route::get('/saved', function () {
     return view('saved');
 })->middleware(['auth'])->name('saved');

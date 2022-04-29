@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\Subject;
 use App\Models\Tag;
 use Illuminate\Http\Request;
@@ -13,6 +14,17 @@ class Search extends Controller
         return view('search', [
             'subjects' => Subject::query()->get('*'),
             'tags' => Tag::query()->get('*'),
+        ]);
+    }
+
+    public function doSearch(Request $request)
+    {
+        $data = Post::search($request->input('search'));
+
+        $data->where('subject_id', $request->input('subject'));
+
+        return view('results', [
+            'results' => $data->get(),
         ]);
     }
 }
