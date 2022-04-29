@@ -19,7 +19,9 @@
                                         <div class="flex items-center justify-between">
                                             <p class="text-sm font-medium text-indigo-600 truncate">{{$r->title}}</p>
                                             <div class="ml-2 flex-shrink-0 flex">
-                                                <p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Full-time</p>
+                                                @foreach($r->Tag as $tag)
+                                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-500 text-blue-800"> {{$tag}} </span>
+                                                @endforeach
                                             </div>
                                         </div>
                                         <div class="mt-2 sm:flex sm:justify-between">

@@ -22,7 +22,7 @@ class Post extends Model
 
     public function Tag()
     {
-        return $this->hasMany(Tag::class);
+        return $this->belongsToMany(Tag::class);
     }
 
     public function Subject()
