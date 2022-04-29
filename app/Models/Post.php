@@ -23,4 +23,9 @@ class Post extends Model
     {
         return $this->belongsTo(Subject::class);
     }
+
+    public function SavePost()
+    {
+        return $this->hasMany(Save::class);
+    }
 }
