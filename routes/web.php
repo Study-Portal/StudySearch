@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Search;
+use App\Http\Controllers\Upload;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +30,10 @@ Route::get('/search', [Search::class, 'view'])
 Route::get('/results', [Search::class, 'doSearch'])
     ->middleware('auth')
     ->name('results');
+
+Route::get('/create', [Upload::class, 'view'])
+    ->middleware('auth')
+    ->name('create');
 
 Route::get('/saved', function () {
     return view('saved');
