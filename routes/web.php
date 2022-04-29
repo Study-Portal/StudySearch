@@ -39,4 +39,8 @@ Route::get('/saved', function () {
     return view('saved');
 })->middleware(['auth'])->name('saved');
 
+Route::post('/create/save', [Upload::class, 'SaveIt'])
+    ->middleware('auth')
+    ->name('create.save');
+
 require __DIR__.'/auth.php';
