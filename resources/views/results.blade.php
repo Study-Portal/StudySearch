@@ -12,7 +12,7 @@
 
                     <div class="bg-white shadow overflow-hidden sm:rounded-md">
                         <ul role="list" class="divide-y divide-gray-200">
-                            @foreach($results as $r)
+                            @forelse($results as $r)
                             <li>
                                 <a href="#" class="block hover:bg-gray-50">
                                     <div class="px-4 py-4 sm:px-6">
@@ -53,7 +53,12 @@
                                     </div>
                                 </a>
                             </li>
-                            @endforeach
+                            @empty
+                                <div class="text-center">
+                                    <h3 class="mt-2 text-sm font-medium text-gray-900">No results</h3>
+                                    <p class="mt-1 text-sm text-gray-500">Could not find any results matching your criteria.</p>
+                                </div>
+                            @endforelse
 
                         </ul>
 
