@@ -20,7 +20,7 @@
                                             <p class="text-sm font-medium text-indigo-600 truncate">{{$r->title}}</p>
                                             <div class="ml-2 flex-shrink-0 flex">
                                                 @foreach($r->Tag as $tag)
-                                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-500 text-blue-800"> {{$tag}} </span>
+                                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-500 text-blue-800"> {{$tag->tag}} </span>
                                                 @endforeach
                                             </div>
                                         </div>
