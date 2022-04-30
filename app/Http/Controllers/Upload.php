@@ -23,6 +23,8 @@ class Upload extends Controller
 
         $upload = Storage::put($request->input('uploaded'), 'uploads');
 
+        $path = \Illuminate\Support\Facades\Storage::path($request->input('uploaded'));
+
         Post::query()->create(
             [
                 'title' => $request->input('title'),
@@ -30,7 +32,7 @@ class Upload extends Controller
                 'user_id' => auth()->id(),
                 'subject_id' => $request->input('subject'),
                 'private' => $request->input('privacy'),
-                'directory' => $upload
+                'directory' => $path
             ]
         )->save();
 
