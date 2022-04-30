@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('title');
             $table->text('description');
             $table->text('subject_id');
+            $table->string('directory');
             $table->boolean('private')->default('0');
             $table->timestamps();
         });

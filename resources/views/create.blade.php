@@ -12,6 +12,7 @@
 
                     @if (auth()->user()->hasVerifiedEmail())
                         <form class="flex h-full w-full flex-col overflow-y-scroll bg-white" method="post" action="{{route('create.save')}}">
+                            @csrf
                             <div class="flex-1">
                                 <!-- Divider container -->
                                 <div class="space-y-6 py-6 sm:space-y-0 sm:divide-y sm:divide-gray-200 sm:py-0">
@@ -50,6 +51,11 @@
                                             <option selected value="0">Public</option>
                                             <option value="1">Private</option>
                                         </select>
+                                    </div>
+
+                                    <div class="py-4 px-6 sm:grid sm:py-5 sm:grid-cols-3 sm:gap-4">
+                                        <label for="uploaded" class="text-sm font-medium text-gray-500">Attachment</label>
+                                        <input id="uploaded" name="uploaded" type="file">
                                     </div>
 
                                 </div>
