@@ -10,6 +10,15 @@ class Post extends Model
 {
     use HasFactory, Searchable;
 
+    protected $fillable = [
+        'title',
+        'description',
+        'private',
+        'user_id',
+        'subject_id',
+        'directory'
+    ];
+
     public function toSearchableArray()
     {
         return ['title', 'description'];
