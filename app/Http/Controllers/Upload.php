@@ -38,4 +38,19 @@ class Upload extends Controller
 
         return redirect(route('dashboard')); //TEMPORARY
     }
+
+    public function details($id)
+    {
+        return view('details', [
+            'post' => Post::query()->find($id)
+        ]);
+    }
+
+    public function download($id)
+    {
+        $p = Post::query()->find($id);
+        $dir = $p->directory;
+
+        return Storage::download($dir);
+    }
 }

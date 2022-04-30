@@ -40,6 +40,14 @@ Route::get('/saved', [Saved::class, 'view'])
     ->middleware('auth')
     ->name('saved');
 
+Route::get('/details/{id}', [Upload::class, 'details'])
+    ->middleware('auth')
+    ->name('details');
+
+Route::get('/details/{id}/download', [Upload::class, 'download'])
+    ->middleware('auth')
+    ->name('download');
+
 Route::post('/create/save', [Upload::class, 'SaveIt'])
     ->middleware('auth')
     ->name('create.save');
