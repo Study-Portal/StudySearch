@@ -18,20 +18,20 @@
                                     <!-- Project name -->
                                     <div class="space-y-1 px-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:space-y-0 sm:px-6 sm:py-5">
                                         <div>
-                                            <label for="project-name" class="block text-sm font-medium text-gray-900 sm:mt-px sm:pt-2"> Document title </label>
+                                            <label for="title" class="block text-sm font-medium text-gray-900 sm:mt-px sm:pt-2"> Document title </label>
                                         </div>
                                         <div class="sm:col-span-2">
-                                            <input type="text" name="project-name" id="project-name" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                            <input type="text" name="title" id="title" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                                         </div>
                                     </div>
 
                                     <!-- Project description -->
                                     <div class="space-y-1 px-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:space-y-0 sm:px-6 sm:py-5">
                                         <div>
-                                            <label for="project-description" class="block text-sm font-medium text-gray-900 sm:mt-px sm:pt-2"> Description </label>
+                                            <label for="description" class="block text-sm font-medium text-gray-900 sm:mt-px sm:pt-2"> Description </label>
                                         </div>
                                         <div class="sm:col-span-2">
-                                            <textarea id="project-description" name="project-description" rows="3" class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+                                            <textarea id="description" name="description" rows="3" class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
                                         </div>
                                     </div>
 
