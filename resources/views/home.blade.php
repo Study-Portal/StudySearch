@@ -100,7 +100,7 @@
                         <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
                             <!-- Content area -->
                             <div class="pt-12 sm:pt-16 lg:pt-20">
-                                <h2 class="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-4xl">On a mission to empower teams</h2>
+                                <h2 class="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-4xl">On a mission to support students</h2>
                                 <div class="mt-6 text-gray-500 space-y-6">
                                     <p class="text-lg">Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae.</p>
                                     <p class="text-base leading-7">Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna. Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna.</p>
@@ -113,22 +113,22 @@
                                 <dl class="grid grid-cols-2 gap-x-4 gap-y-8">
                                     <div class="border-t-2 border-gray-100 pt-6">
                                         <dt class="text-base font-medium text-gray-500">Founded</dt>
-                                        <dd class="text-3xl font-extrabold tracking-tight text-gray-900">2021</dd>
+                                        <dd class="text-3xl font-extrabold tracking-tight text-gray-900">2022</dd>
                                     </div>
 
                                     <div class="border-t-2 border-gray-100 pt-6">
                                         <dt class="text-base font-medium text-gray-500">Employees</dt>
-                                        <dd class="text-3xl font-extrabold tracking-tight text-gray-900">5</dd>
+                                        <dd class="text-3xl font-extrabold tracking-tight text-gray-900">1</dd>
                                     </div>
 
                                     <div class="border-t-2 border-gray-100 pt-6">
                                         <dt class="text-base font-medium text-gray-500">Beta Users</dt>
-                                        <dd class="text-3xl font-extrabold tracking-tight text-gray-900">521</dd>
+                                        <dd class="text-3xl font-extrabold tracking-tight text-gray-900">{{\App\Models\User::query()->get('id')->count()}}</dd>
                                     </div>
 
                                     <div class="border-t-2 border-gray-100 pt-6">
                                         <dt class="text-base font-medium text-gray-500">Raised</dt>
-                                        <dd class="text-3xl font-extrabold tracking-tight text-gray-900">$25M</dd>
+                                        <dd class="text-3xl font-extrabold tracking-tight text-gray-900">£1</dd>
                                     </div>
                                 </dl>
                                 <div class="mt-10">
@@ -203,7 +203,7 @@
                             <div class="relative">
                                 <div class="sm:text-center">
                                     <h2 class="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">Get notified when we&rsquo;re launching.</h2>
-                                    <p class="mt-6 mx-auto max-w-2xl text-lg text-rose-100">Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque.</p>
+                                    <p class="mt-6 mx-auto max-w-2xl text-lg text-rose-100">If your excited for what's coming then drop your email below, and we will notify you when we go live!</p>
                                 </div>
                                 <form action="#" class="mt-12 sm:mx-auto sm:max-w-lg sm:flex">
                                     <div class="min-w-0 flex-1">
@@ -223,31 +223,6 @@
             <!-- Footer section -->
             <footer class="mt-24 bg-gray-900 sm:mt-12">
                 <div class="mx-auto max-w-md py-12 px-4 overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-                    <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
-                        <div class="px-5 py-2">
-                            <a href="#" class="text-base text-gray-400 hover:text-gray-300"> About </a>
-                        </div>
-
-                        <div class="px-5 py-2">
-                            <a href="#" class="text-base text-gray-400 hover:text-gray-300"> Blog </a>
-                        </div>
-
-                        <div class="px-5 py-2">
-                            <a href="#" class="text-base text-gray-400 hover:text-gray-300"> Jobs </a>
-                        </div>
-
-                        <div class="px-5 py-2">
-                            <a href="#" class="text-base text-gray-400 hover:text-gray-300"> Press </a>
-                        </div>
-
-                        <div class="px-5 py-2">
-                            <a href="#" class="text-base text-gray-400 hover:text-gray-300"> Accessibility </a>
-                        </div>
-
-                        <div class="px-5 py-2">
-                            <a href="#" class="text-base text-gray-400 hover:text-gray-300"> Partners </a>
-                        </div>
-                    </nav>
                     <div class="mt-8 flex justify-center space-x-6">
                         <a href="#" class="text-gray-400 hover:text-gray-300">
                             <span class="sr-only">Instagram</span>
