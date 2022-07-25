@@ -6,7 +6,7 @@ use App\Models\Post;
 use App\Models\Subject;
 use Illuminate\Http\File;
 use Illuminate\Http\Request;
-use Storage;
+use Illuminate\Support\Facades\Storage;
 
 class Upload extends Controller
 {
