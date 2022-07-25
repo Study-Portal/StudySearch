@@ -19,9 +19,7 @@ class Search extends Controller
 
     public function doSearch(Request $request)
     {
-        $data = Post::search($request->input('search'));
-
-        $data
+        $data = Post::search($request->input('search'))
             ->where('subject_id', $request->input('subject'))
             ->where('private', 0);
 
