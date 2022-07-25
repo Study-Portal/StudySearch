@@ -19,7 +19,15 @@
                                         <div class="flex items-center justify-between">
                                             <p class="text-sm font-medium text-indigo-600 truncate">{{$p->title}}</p>
                                             <div class="ml-2 flex-shrink-0 flex">
-                                                <p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Full-time</p>
+                                                @switch($p->private)
+                                                    @case(1)
+                                                        <p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Private</p>
+                                                        @break(1)
+
+                                                    @case(0)
+                                                        <p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">Public</p>
+                                                        @break(0)
+                                                @endswitch
                                             </div>
                                         </div>
                                         <div class="mt-2 sm:flex sm:justify-between">
