@@ -53,4 +53,11 @@ class Upload extends Controller
 
         return Storage::download($dir);
     }
+
+    public function uploaded()
+    {
+        return view('uploaded', [
+            'up' => Post::query()->where('posts.user_id', auth()->id())->paginate(10)
+        ]);
+    }
 }
